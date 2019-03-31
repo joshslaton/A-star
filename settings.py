@@ -1,5 +1,10 @@
 import pygame
 
+def debug(params):
+    if type(params) == list:
+        for item in params:
+            print(item)
+
 size = windowWidth, windowHeight = 400, 400
 display_surf = pygame.display.set_mode(size)
 
