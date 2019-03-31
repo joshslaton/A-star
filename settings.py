@@ -2,14 +2,17 @@ import pygame
 
 def debug(params):
     if type(params) == list:
-        for item in params:
-            print(item)
+        for i in params:
+            for j in i:
+                for attr, val in j.__dict__.items():
+                    print(attr, val)
+                print("----------")
 
-size = windowWidth, windowHeight = 400, 400
+size = windowWidth, windowHeight = 402, 402
 display_surf = pygame.display.set_mode(size)
 
-cols = 5
-rows = 5
+cols = 10
+rows = 10
 grid = []
 
 cellWidth = windowWidth / rows
