@@ -1,14 +1,8 @@
 import pygame
 
-def debug(params):
-    if type(params) == list:
-        for i in params:
-            for j in i:
-                for attr, val in j.__dict__.items():
-                    print(attr, val)
-                print("----------")
 
-size = windowWidth, windowHeight = 402, 402
+
+size = windowWidth, windowHeight = 400, 400
 display_surf = pygame.display.set_mode(size)
 
 cols = 10
